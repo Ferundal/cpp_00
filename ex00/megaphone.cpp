@@ -27,6 +27,7 @@ int	main(int argc, char** argv)
 					std::cout << *argv[pos] - 32;
 				else
 					std::cout << *argv[pos];
+				++pos;
 			}
 			std::cout << std::endl;
 			--argc;
