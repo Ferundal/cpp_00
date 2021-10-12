@@ -21,12 +21,12 @@ int	main(int argc, char** argv)
 		{
 			pos = 0;
 			++argv;
-			while (*argv[pos] != '\0')
+			while ((*argv)[pos] != '\0')
 			{
-				if (is_lower_case(*argv[pos]) == true)
-					std::cout << *argv[pos] - 32;
+				if (is_lower_case((*argv)[pos]) == true)
+					std::cout << (char)((*argv)[pos] - 32);
 				else
-					std::cout << *argv[pos];
+					std::cout << (*argv)[pos];
 				++pos;
 			}
 			std::cout << std::endl;
