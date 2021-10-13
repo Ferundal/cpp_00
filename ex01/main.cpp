@@ -11,7 +11,7 @@ int	main()
 		if (comm == "ADD")
 			phoneBook.AddContact();
 		if (comm == "SEARCH")
-			phoneBook.ShowContacts();
+			phoneBook.SearchContacts();
 		std::cin >> comm;
 	}
 }

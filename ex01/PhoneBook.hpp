@@ -12,7 +12,7 @@
 # include <iomanip>
 # include "Contact.hpp"
 
-# define PHONE_BOOK_SIZE 10
+# define PHONE_BOOK_SIZE 8
 # define PHONE_FEELD_SIZE 10
 
 class PhoneBook {
@@ -21,8 +21,9 @@ private:
 	int8_t	lastPosition;
 	int8_t	fullness;
 public:
+	PhoneBook();
 	void AddContact ();
-	void ShowContacts ();
+	void SearchContacts ();
 };
 
 #endif

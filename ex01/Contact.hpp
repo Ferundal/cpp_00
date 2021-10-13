@@ -18,10 +18,11 @@ private:
 	std::string	phoneNumber;
 	std::string	darkestSecret;
 public:
-	void FillContact ();
-	std::string GetNameLimited (unsigned int limit);
-	std::string GetLastNameLimited (unsigned int limit);
-	std::string GetNicknameLimited (unsigned int limit);
+	int			FillContact ();
+	void		PutContact ();
+	std::string	GetNameLimited (unsigned int limit);
+	std::string	GetLastNameLimited (unsigned int limit);
+	std::string	GetNicknameLimited (unsigned int limit);
 };
 
 #endif
