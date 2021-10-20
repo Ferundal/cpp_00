@@ -10,6 +10,7 @@
 # include <iostream>
 # include <stdint.h>
 # include <iomanip>
+# include <cstdlib>
 # include "Contact.hpp"
 
 # define PHONE_BOOK_SIZE 8

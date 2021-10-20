@@ -52,7 +52,7 @@ ifdef COMPILE_BONUS
 SRCS_CPP:=			${SRCS_CPP} ${SRCS_CPP_BONUS}
 endif
 
-OBJS_CPP=				${SRCS_CPP:.cpp=.o}
+OBJS_CPP=			${SRCS_CPP:.cpp=.o}
 
 NAME=				phonebook
 
