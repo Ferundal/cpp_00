@@ -16,15 +16,15 @@ static std::string CutStringByLimit (std::string &str, unsigned int limit) {
 }
 
 int	Contact::FillContact () {
-	std::cout << "Insert name:";
+	std::cout << "Insert name:" << std::endl;
 	std::getline(std::cin, name);
-	std::cout << "Insert last name:";
+	std::cout << "Insert last name:" << std::endl;
 	std::getline(std::cin, lastName);
-	std::cout << "Insert nickname:";
+	std::cout << "Insert nickname:" << std::endl;
 	std::getline(std::cin, nickname);
-	std::cout << "Insert phone number:";
+	std::cout << "Insert phone number:" << std::endl;
 	std::getline(std::cin, phoneNumber);
-	std::cout << "Insert darkest secret:";
+	std::cout << "Insert darkest secret:" << std::endl;
 	std::getline(std::cin, darkestSecret);
 	return (0);
 }
