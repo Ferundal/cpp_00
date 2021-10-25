@@ -37,6 +37,8 @@ Account::Account( int initial_deposit ) {
 	++_nbAccounts;
 	_amount = initial_deposit;
 	_totalAmount += initial_deposit;
+	_nbDeposits = 0;
+	_nbWithdrawals = 0;
 	std::cout << " index:" << _accountIndex << ';';
 	std::cout << "amount:" << _amount << ';';
 	std::cout << "created" << std::endl;
@@ -76,7 +78,7 @@ bool	Account::makeWithdrawal( int withdrawal ) {
 		_totalAmount -= withdrawal;
 		_amount -= withdrawal;
 		std::cout << "amount:" << _amount << ';';
-		std::cout << "nb_withdrawal:" << _nbWithdrawals << std::endl;
+		std::cout << "nb_withdrawals:" << _nbWithdrawals << std::endl;
 		return (true);
 	}
 	std::cout << "refused" << std::endl;

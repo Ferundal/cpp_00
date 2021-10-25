@@ -19,7 +19,7 @@
 class PhoneBook {
 private:
 	Contact	contactArray[PHONE_BOOK_SIZE];
-	int8_t	lastPosition;
+	int8_t	firstContactPosition;
 	int8_t	fullness;
 public:
 	PhoneBook();
