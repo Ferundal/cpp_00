@@ -4,13 +4,13 @@
 
 #include "Contact.hpp"
 
-static std::string CutStringByLimit (std::string &str, unsigned int limit) {
-	std::string		new_str (str);
-	unsigned int	len = new_str.size();
+static std::string	*CutStringByLimit (std::string &str, unsigned int limit) {
+	std::string		*new_str = new std::string (str);
+	unsigned int	len = new_str->size();
 	if (len > limit) {
-		new_str.resize(limit);
+		new_str->resize(limit);
 		if (limit > DOTS_AMNT)
-			new_str.replace(len - DOTS_AMNT, len, DOTS_AMNT, '.');
+			new_str->replace(limit - DOTS_AMNT, limit, DOTS_AMNT, '.');
 	}
 	return (new_str);
 }
@@ -37,14 +37,14 @@ void Contact::PutContact () {
 	std::cout << "Dark Secret:" << darkestSecret << std::endl;
 }
 
-std::string Contact::GetNameLimited (unsigned int limit) {
+std::string *Contact::GetNameLimited (unsigned int limit) {
 	return (CutStringByLimit(name, limit));
 }
 
-std::string Contact::GetLastNameLimited (unsigned int limit){
+std::string *Contact::GetLastNameLimited (unsigned int limit){
 	return (CutStringByLimit(lastName, limit));
 }
 
-std::string Contact::GetNicknameLimited (unsigned int limit){
+std::string *Contact::GetNicknameLimited (unsigned int limit){
 	return (CutStringByLimit(nickname, limit));
 }

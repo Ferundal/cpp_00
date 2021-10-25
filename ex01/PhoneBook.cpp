@@ -46,11 +46,17 @@ void PhoneBook::SearchContacts () {
 	if (fullness > 0) {
 		int8_t pos = firstContactPosition;
 		for (int i = 0; i < fullness; ++i) {
-			Contact &curr = contactArray[pos];
+			std::string *curr;
 			std::cout << std::setw (PHONE_FEELD_SIZE) << (i + 1) << '|';
-			std::cout << std::setw (PHONE_FEELD_SIZE) << curr.GetNameLimited(PHONE_FEELD_SIZE) << '|';
-			std::cout << std::setw (PHONE_FEELD_SIZE) << curr.GetLastNameLimited(PHONE_FEELD_SIZE) << '|';
-			std::cout << std::setw (PHONE_FEELD_SIZE) << curr.GetNicknameLimited(PHONE_FEELD_SIZE) << std::endl;
+			curr = contactArray[pos].GetNameLimited(PHONE_FEELD_SIZE);
+			std::cout << std::setw (PHONE_FEELD_SIZE) << *curr << '|';
+			delete curr;
+			curr = contactArray[pos].GetLastNameLimited(PHONE_FEELD_SIZE);
+			std::cout << std::setw (PHONE_FEELD_SIZE) << *curr << '|';
+			delete curr;
+			curr = contactArray[pos].GetNicknameLimited(PHONE_FEELD_SIZE);
+			std::cout << std::setw (PHONE_FEELD_SIZE) << *curr << std::endl;
+			delete curr;
 			if (pos != 0)
 				--pos;
 			else

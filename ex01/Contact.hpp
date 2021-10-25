@@ -20,9 +20,9 @@ private:
 public:
 	int			FillContact ();
 	void		PutContact ();
-	std::string	GetNameLimited (unsigned int limit);
-	std::string	GetLastNameLimited (unsigned int limit);
-	std::string	GetNicknameLimited (unsigned int limit);
+	std::string	*GetNameLimited (unsigned int limit);
+	std::string	*GetLastNameLimited (unsigned int limit);
+	std::string	*GetNicknameLimited (unsigned int limit);
 };
 
 #endif
